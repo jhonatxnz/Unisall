@@ -1,0 +1,113 @@
+//1.Escreva um programa que leia um conjunto de 5 números inteiros, calcule e exiba a soma dos números.
+int main()
+{
+    int i, aux, soma;
+    i = 1;
+    while (i < 6){
+        printf ("Digite o %d valor:", i);
+        scanf ("%d", &aux);
+        soma += aux;
+        i++;
+    }
+    
+    printf ("A soma de %d", soma);
+    return 0;
+}
+//2.Escreva um programa que leia um conjunto de 5 números inteiros, calcule a soma de todos os números pares.
+int main()
+{
+    int i, aux, soma;
+    i = 1;
+    while (i < 6){
+        printf ("Digite o %d valor:", i);
+        scanf ("%d", &aux);
+        
+        if(aux % 2 == 0)
+            soma += aux;
+            
+        i++;
+    }
+    
+    printf ("A soma dos numeros pares e %d", soma);
+    return 0;
+}
+//3.Escreva um programa que leia um conjunto de 5 números e exiba a média dos números
+int main()
+{
+    int i, aux, soma;
+    i = 1;
+    while (i < 6){
+        printf ("Digite o %d valor:", i);
+        scanf ("%d", &aux);
+        
+        soma += aux;
+            
+        i++;
+    }
+    
+    printf ("A media dos numeros e %d", soma / 5);
+    return 0;
+}
+//4.Escreva um programa que leia um conjunto de 5 números e exiba a média dos números pares e a quantidade de números impares
+int main()
+{
+    int i, aux, soma, qtdI;
+    i = 1;
+    do {
+        printf ("Digite o %d valor:", i);
+        scanf ("%d", &aux);
+        
+        if(aux % 2 == 0)
+            soma += aux;
+        else
+            qtdI++;
+        
+        i++;
+    } while (i < 6);
+    
+    printf ("A media dos numeros pares e %d e a quantidade de numeros impares e %d", soma / (5 - qtdI), qtdI);
+    return 0;
+}
+//5.Escreva um programa que leia um conjunto de números, e, para cada número positivo lido . . . sinalizar o fim dos dados.
+int main()
+{
+    int valorLido;
+    
+    do {
+        printf ("Digite um numero (Caso o numero nao for positivo o programa ira encerrar):");
+        scanf ("%d", &valorLido);
+        
+        if(valorLido % 2 == 0)
+            printf ("numero par!\n");
+        else
+            printf ("numero impar!\n");
+            
+    } while (valorLido > 0);
+    
+    printf ("encerrando o programa!\n");
+    return 0;
+}
+//6.Escreva um programa que leia 5 números positivos e determine o maior valor lido. Se digitar número negativo finalizar o programa e devolver o maior número encontrado
+int main()
+{
+    int i, maior, valorLido;
+    maior = -1;
+    i = 0;
+    
+    while (i < 5) {
+       printf ("Digite um numero positivo:");
+       scanf ("%d", &valorLido);
+       
+       if(valorLido < 0){
+           printf ("O maior valor lido foi: %d", maior);
+           return 0;
+       }
+       
+       if(valorLido > maior)
+           maior = valorLido;
+        i++;
+    }
+    printf ("O maior valor lido foi: %d", maior);
+    
+    return 0;
+}

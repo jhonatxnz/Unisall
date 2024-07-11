@@ -1,0 +1,44 @@
+define QTD 10
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+	
+float nota[10];
+float somaGeral = 0;
+float somaIndP = 0;
+float somaIndI = 0;
+float somaPar = 0;
+float somaImp = 0;
+int i;
+
+	for (i = 0; i < QTD; i++) {
+		printf("Entre com o %i valor: ", (i + 1));
+		scanf("%f", &nota[i]);
+		
+		somaGeral = somaGeral + nota[i];
+		
+			
+		if((int)nota[i] % 2 == 0)
+			somaPar = somaPar + nota[i];
+		else
+			somaImp = somaImp + nota[i];
+		
+			
+	}
+	float mg = somaGeral / QTD;
+	float mp = somaPar / (QTD / 2);
+	float mi = somaImp / (QTD / 2);
+	printf("Media dos numeros digitados %f \n", mg);
+	printf("Soma dos pares = %f , Media dos pares = %f \n", somaPar, mp);
+	printf("Soma dos impares = %f , Media dos impares = %f \n", somaImp, mi);
+	
+	if(mg > mp && mg > mi)
+		printf("media geral e a maior \n");
+	else if(mp > mg & mg > mi)
+		printf("media par e a maior \n");
+	else
+		printf("media impar e a maior \n");
+	
+	return 0;
+	
+}

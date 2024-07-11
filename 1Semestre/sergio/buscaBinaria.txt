@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    
+    int aux, maior, menor, meio, procurado = 0;
+    int tam  = 6;
+    int valores[6] = {1, 2, 3, 4, 5, 6};
+    
+    meio = tam / 2;
+    maior = tam - 1;
+    
+    
+	printf("Digite o valor a ser procurado no vetor: ");
+	scanf("%d", &procurado);
+    
+    for(int i = 0; i < tam; i++){
+       if(procurado == valores[meio]){
+           printf("achou o numero {%d} no indice {%d}", procurado, meio);
+           return 0;
+       } else if(procurado > valores[meio]){
+           meio = ceil((double)(meio + maior) / 2); // Arredondar para cima
+           printf("passou aq > com meio valendo {%d}", meio);
+       } else {
+           meio = floor((double)(menor + 1) / 2); // Arredondar para baixo
+           printf("passou aq < com meio valendo {%d}", meio);
+       }
+    }
+    return 0;
+}

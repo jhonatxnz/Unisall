@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(){ //decimal to octal
+	int v[32];
+	int resto, dec , i = 0;
+	
+	printf("Digite o numero em decimal ");
+	scanf("%d", &dec);
+	
+	while(dec > 0){
+		v[i] = dec % 2;
+		resto = dec % 2;
+		dec = dec / 2;
+		i++;
+	}
+
+	for(int j = 4; j > -1;j--){
+		printf("%d", v[j]);
+	}
+	return 1;
+}

@@ -1,0 +1,29 @@
+int main(){
+int inicio, fim, qtdP, qtdI, somaP, somaI;
+qtdI = 0;
+qtdP = 0;
+somaP = 0;
+somaI = 0;
+printf ("Digite o inicio do intervalo:");
+scanf ("%d", &inicio);
+printf ("Digite o fim do intervalo:");
+scanf ("%d", &fim);
+
+while(inicio <= fim){
+	if(inicio % 2 == 0){
+		somaP+= inicio;
+		qtdP++;
+	}
+	else{
+		somaI+= inicio;
+		qtdI++;
+	}
+	inicio++;
+}
+
+printf ("A media dos numeros pares e %f\n", (float)somaP / qtdP);
+
+int media1 = somaP / qtdP;
+int media2 = somaI / qtdI;printf ("A media dos numeros impares e %f\n", (float)somaI / qtdI);
+printf ("A media de todos os numeros e %f", (float)(somaP + somaI) / (float)(qtdP + qtdI));
+}
